@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <meta name="description" content="A Kolkata microfinance trial, reviewed as a credit pilot.">
+  <title>Overview · First Payment</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="theme.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#content">Skip to content</a>
+  <header class="wrap masthead">
+    <a class="wordmark" href="index.html">First Payment</a>
+    <label class="theme" hidden>
+      <span>Theme</span>
+      <select id="theme">
+        <option value="system">System</option>
+        <option value="light">Light</option>
+        <option value="dark">Dark</option>
+      </select>
+    </label>
+    <nav aria-label="Study pages"><a href="index.html" aria-current=page>Overview</a><a href="trial.html">The trial</a><a href="reproduction.html">Reproduction</a><a href="decision.html">The decision</a><a href="pricing.html">Pricing</a><a href="robustness.html">Robustness</a><a href="limits.html">Data and limits</a></nav>
+  </header>
+  <main id="content" class="wrap" tabindex="-1">
+    <section class="hero" aria-labelledby="headline">
+      <div>
+        <p class="label">Kolkata · Microfinance</p>
+        <h1 id="headline">When should the first payment be due?</h1>
+        <p class="lede">A longer wait before repayment raised reported weekly business profit
+        among borrowers with follow-up data. The estimated rise in default was too large for
+        this pilot rule.</p>
+        <a class="primary" href="decision.html">Try the risk-tolerance sliders</a>
+      </div>
+      <div>
+        <figure class="schedule" aria-labelledby="schedule-title">
+          <h2 id="schedule-title">When repayment started</h2>
+          <p class="schedule-origin"><span aria-hidden="true"></span> Loan disbursed</p>
+          <div class="arm arm-regular">
+            <div class="arm-label"><strong>Regular</strong><span>After two weeks</span></div>
+            <div class="track" aria-hidden="true"><span></span></div>
+          </div>
+          <div class="arm arm-grace">
+            <div class="arm-label"><strong>Grace period</strong><span>After two months</span></div>
+            <div class="track" aria-hidden="true"><span></span></div>
+          </div>
+          <figcaption>Approximate schedule. Both contracts used fortnightly
+          instalments.</figcaption>
+        </figure>
+        <p class="verdict"><strong>Pilot FAIL</strong>
+        <span>Default upper bound 11.09 pp · cap 2.00 pp</span>
+        </p>
+      </div>
+    </section>
+    <section class="chapter" aria-labelledby="readout">
+      <h2 id="readout">What changed</h2>
+      <div>
+        <dl class="metrics"><div><dt>Default at 52 weeks past due</dt>
+          <dd><strong>+6.14</strong> pp</dd>
+          <dd class="note">95% CI 1.20 to 11.09 · n=845</dd></div><div><dt>Weekly business profit</dt>
+          <dd><strong>+906.6</strong> ₹/week</dd>
+          <dd class="note">95% CI 168.7 to 1,644.4 · n=752</dd></div><div><dt>Loan spending on the business</dt>
+          <dd><strong>+364.9</strong> ₹/loan</dd>
+          <dd class="note">95% CI 9.3 to 720.5 · n=845</dd></div></dl>
+        <p class="note">Effects compare assignment to the two contracts. The profit measure was
+        taken around three years after disbursement.</p>
+      </div>
+    </section>
+    <div class="next">
+      <a href="trial.html">Next · The trial</a>
+    </div>
+  </main>
+  <footer class="wrap masthead footer">
+    <a href="https://github.com/Ghostboy789">Medhansh Shekhawat</a>
+    <a href="https://doi.org/10.1257/aer.103.6.2196">Trial paper</a>
+    <a href="https://doi.org/10.3886/E112672V1">Replication deposit</a>
+  </footer>
+</body>
+</html>

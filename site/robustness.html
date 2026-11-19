@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <meta name="description" content="A Kolkata microfinance trial, reviewed as a credit pilot.">
+  <title>Robustness · First Payment</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="theme.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#content">Skip to content</a>
+  <header class="wrap masthead">
+    <a class="wordmark" href="index.html">First Payment</a>
+    <label class="theme" hidden>
+      <span>Theme</span>
+      <select id="theme">
+        <option value="system">System</option>
+        <option value="light">Light</option>
+        <option value="dark">Dark</option>
+      </select>
+    </label>
+    <nav aria-label="Study pages"><a href="index.html">Overview</a><a href="trial.html">The trial</a><a href="reproduction.html">Reproduction</a><a href="decision.html">The decision</a><a href="pricing.html">Pricing</a><a href="robustness.html" aria-current=page>Robustness</a><a href="limits.html">Data and limits</a></nav>
+  </header>
+  <main id="content" class="wrap" tabindex="-1">
+    <header class="page-header">
+      <p class="label">Robustness</p>
+      <h1>The profit result depends on the tail and missing values.</h1>
+      <p class="lede">Every profit scenario leaves the preset pilot rejected on default.</p>
+    </header>
+    <section class="chapter wide"><h2>Profit under stress</h2>
+      <table role="table"><caption>The primary default estimate and cap are fixed across the profit scenarios.</caption><thead role="rowgroup"><tr role="row"><th scope="col" role="columnheader">Scenario</th><th scope="col" role="columnheader">Effect (₹/week)</th><th scope="col" role="columnheader">95% CI (₹/week)</th><th scope="col" role="columnheader">n</th><th scope="col" role="columnheader">Profit gate</th><th scope="col" role="columnheader">Pilot</th></tr></thead><tbody role="rowgroup"><tr role="row"><th scope="row" role="rowheader">Winsorized profit</th><td role="cell"><span class="cell-label" aria-hidden="true">Effect (₹/week)</span>+529.2</td><td role="cell"><span class="cell-label" aria-hidden="true">95% CI (₹/week)</span>169.7 to 888.6</td><td role="cell"><span class="cell-label" aria-hidden="true">n</span>752</td><td role="cell"><span class="cell-label" aria-hidden="true">Profit gate</span>PASS</td><td role="cell"><span class="cell-label" aria-hidden="true">Pilot</span>FAIL</td></tr><tr role="row"><th scope="row" role="rowheader">Trimmed profit</th><td role="cell"><span class="cell-label" aria-hidden="true">Effect (₹/week)</span>+335.0</td><td role="cell"><span class="cell-label" aria-hidden="true">95% CI (₹/week)</span>−6.9 to 676.8</td><td role="cell"><span class="cell-label" aria-hidden="true">n</span>744</td><td role="cell"><span class="cell-label" aria-hidden="true">Profit gate</span>FAIL</td><td role="cell"><span class="cell-label" aria-hidden="true">Pilot</span>FAIL</td></tr><tr role="row"><th scope="row" role="rowheader">Missing profit · low endpoint</th><td role="cell"><span class="cell-label" aria-hidden="true">Effect (₹/week)</span>−1,012.8</td><td role="cell"><span class="cell-label" aria-hidden="true">95% CI (₹/week)</span>−1,481.3 to −544.2</td><td role="cell"><span class="cell-label" aria-hidden="true">n</span>845</td><td role="cell"><span class="cell-label" aria-hidden="true">Profit gate</span>FAIL</td><td role="cell"><span class="cell-label" aria-hidden="true">Pilot</span>FAIL</td></tr><tr role="row"><th scope="row" role="rowheader">Missing profit · high endpoint</th><td role="cell"><span class="cell-label" aria-hidden="true">Effect (₹/week)</span>+2,012.2</td><td role="cell"><span class="cell-label" aria-hidden="true">95% CI (₹/week)</span>1,523.1 to 2,501.3</td><td role="cell"><span class="cell-label" aria-hidden="true">n</span>845</td><td role="cell"><span class="cell-label" aria-hidden="true">Profit gate</span>PASS</td><td role="cell"><span class="cell-label" aria-hidden="true">Pilot</span>FAIL</td></tr></tbody></table>
+      <p>Winsorizing clips values to the pooled 1st and 99th percentiles
+      (₹0.0 to 13,766.6 per week). Trimming drops rows outside those cutoffs.
+      The trim’s weekly-profit interval crosses zero.</p>
+      <p>The missing-profit scenarios assign the cutoffs in opposite directions by arm.
+      They bound the fitted coefficient for the clipped outcome under the stated support assumption.
+      Each interval is conditional on its completed values and cutoffs.</p>
+    </section>
+    <section class="chapter wide"><h2>Reassigning loan groups</h2>
+      <table role="table"><caption>Two-sided sharp-null checks. P-values summarize the permutation distribution.</caption><thead role="rowgroup"><tr role="row"><th scope="col" role="columnheader">Outcome</th><th scope="col" role="columnheader">Permutation p-value</th></tr></thead><tbody role="rowgroup"><tr role="row"><th scope="row" role="rowheader">52-week default</th><td role="cell"><span class="cell-label" aria-hidden="true">Permutation p-value</span>0.0267</td></tr><tr role="row"><th scope="row" role="rowheader">Deposited loan spending</th><td role="cell"><span class="cell-label" aria-hidden="true">Permutation p-value</span>0.0133</td></tr><tr role="row"><th scope="row" role="rowheader">Profit recorded</th><td role="cell"><span class="cell-label" aria-hidden="true">Permutation p-value</span>0.8272</td></tr></tbody></table>
+      <p>Each of the 9,999 simulated draws preserves the grace group count in each
+      batch. The statistic is the absolute batch-adjusted effect. The loan-spending check
+      uses the batch-only model. The profit test is for whether a value was recorded.</p>
+    </section>
+    <div class="next">
+      <a href="limits.html">Next · Data and limits</a>
+    </div>
+  </main>
+  <footer class="wrap masthead footer">
+    <a href="https://github.com/Ghostboy789">Medhansh Shekhawat</a>
+    <a href="https://doi.org/10.1257/aer.103.6.2196">Trial paper</a>
+    <a href="https://doi.org/10.3886/E112672V1">Replication deposit</a>
+  </footer>
+</body>
+</html>

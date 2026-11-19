@@ -1,0 +1,17 @@
+.venv/
+.uv-cache/
+__pycache__/
+.pytest_cache/
+.ruff_cache/
+.DS_Store
+/dbt/target/
+/dbt/logs/
+/dbt/dbt_packages/
+/data/
+/marts_out/
+/raw/
+*.dta
+*.zip
+*.parquet
+*.duckdb*
+.vercel/

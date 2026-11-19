@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <meta name="description" content="A Kolkata microfinance trial, reviewed as a credit pilot.">
+  <title>Data and limits · First Payment</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="theme.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#content">Skip to content</a>
+  <header class="wrap masthead">
+    <a class="wordmark" href="index.html">First Payment</a>
+    <label class="theme" hidden>
+      <span>Theme</span>
+      <select id="theme">
+        <option value="system">System</option>
+        <option value="light">Light</option>
+        <option value="dark">Dark</option>
+      </select>
+    </label>
+    <nav aria-label="Study pages"><a href="index.html">Overview</a><a href="trial.html">The trial</a><a href="reproduction.html">Reproduction</a><a href="decision.html">The decision</a><a href="pricing.html">Pricing</a><a href="robustness.html">Robustness</a><a href="limits.html" aria-current=page>Data and limits</a></nav>
+  </header>
+  <main id="content" class="wrap" tabindex="-1">
+    <header class="page-header">
+      <p class="label">Data and limits</p>
+      <h1>What this trial can tell us.</h1>
+      <p class="lede">The data cover 845 borrowers at one lender. Follow-up and contract terms set the limits of the decision.</p>
+    </header>
+    <section class="chapter"><h2>Reading the estimates</h2><div>
+      <p>A percentage point is the absolute difference between two rates.
+      A 95% CI gives a range of estimates compatible with the data under the fitted model.
+      Clustering accounts for shared outcomes among members of the same loan group.</p>
+      <p>The experiment compares assignment to whole contracts. The grace arm also had a longer
+      maturity and a lower effective interest rate. Evidence comes from loans assigned in 2007
+      at one Kolkata lender. Applying it to another product or cohort would require new data.</p>
+      <p>Reported business profit is available for a subset. The paper’s text reports 93% loan-use
+      survey coverage, while Table 1 and the deposited outcome use all 845 rows.
+      The deposited matching flag is used as coded. Its exact construction is unresolved.</p>
+    </div></section>
+    <section class="chapter"><h2>Data and code</h2><div>
+      <p>Source data by Erica Field, Rohini Pande, John Papp and Natalia Rigol, published by the
+      American Economic Association and distributed by ICPSR. The original deposit licenses code
+      under BSD-3-Clause and other material under CC BY 4.0. This site presents independently
+      calculated aggregates from that deposit. Use the deposit link to obtain the original data.</p>
+      <p><a href="https://doi.org/10.3886/E112672V1">AEA replication package · project 112672 V1</a></p>
+      <p><a href="data/results.json">Download the aggregate results</a></p>
+    </div></section>
+    <div class="next">
+      <a href="index.html">Back to · Overview</a>
+    </div>
+  </main>
+  <footer class="wrap masthead footer">
+    <a href="https://github.com/Ghostboy789">Medhansh Shekhawat</a>
+    <a href="https://doi.org/10.1257/aer.103.6.2196">Trial paper</a>
+    <a href="https://doi.org/10.3886/E112672V1">Replication deposit</a>
+  </footer>
+</body>
+</html>

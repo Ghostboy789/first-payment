@@ -1,0 +1,10 @@
+version: 2
+models:
+  - name: borrowers
+    columns:
+      - name: borrower_id
+        data_tests: [not_null, unique]
+  - name: outcomes
+    columns:
+      - name: borrower_id
+        data_tests: [not_null, unique]

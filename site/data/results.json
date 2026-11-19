@@ -1,0 +1,345 @@
+{
+  "trial": {
+    "blocks": 9,
+    "availability": [
+      {
+        "assigned_grace": 0,
+        "borrowers": 425,
+        "groups": 85,
+        "default_observed": 425,
+        "investment_observed": 425,
+        "profit_observed": 379,
+        "income_observed": 387,
+        "income_without_profit": 8,
+        "loan_use_flagged": 32
+      },
+      {
+        "assigned_grace": 1,
+        "borrowers": 420,
+        "groups": 84,
+        "default_observed": 420,
+        "investment_observed": 420,
+        "profit_observed": 373,
+        "income_observed": 382,
+        "income_without_profit": 9,
+        "loan_use_flagged": 27
+      }
+    ],
+    "balance": {
+      "age": {
+        "arm_means": [
+          34.50823529411765,
+          33.798561151079134
+        ],
+        "effect": -0.6373190431795747,
+        "se": 0.5606763170367816,
+        "ci": [
+          -1.7441979252983684,
+          0.46955983893921915
+        ],
+        "n": 842,
+        "groups": 169
+      },
+      "married": {
+        "arm_means": [
+          91.05882352941177,
+          86.36363636363636
+        ],
+        "effect": -4.630635538968675,
+        "se": 2.2296022411167704,
+        "ci": [
+          -9.032283265521372,
+          -0.228987812415979
+        ],
+        "n": 843,
+        "groups": 169
+      },
+      "education": {
+        "arm_means": [
+          6.609411764705882,
+          6.48792270531401
+        ],
+        "effect": -0.10360676352926058,
+        "se": 0.3234504986643776,
+        "ci": [
+          -0.7421579480603985,
+          0.5349444210018773
+        ],
+        "n": 839,
+        "groups": 169
+      },
+      "household_size": {
+        "arm_means": [
+          4.068235294117647,
+          4.179856115107913
+        ],
+        "effect": 0.1270226205638691,
+        "se": 0.10474745720961029,
+        "ci": [
+          -0.07976825826926262,
+          0.3338134993970008
+        ],
+        "n": 842,
+        "groups": 169
+      },
+      "baseline_business": {
+        "arm_means": [
+          77.17647058823529,
+          78.4688995215311
+        ],
+        "effect": 1.388487836770253,
+        "se": 4.05976348574276,
+        "ci": [
+          -6.626237116327507,
+          9.403212789868013
+        ],
+        "n": 843,
+        "groups": 169
+      }
+    }
+  },
+  "estimates": {
+    "default_52w": {
+      "effect": 6.1411451398135695,
+      "se": 2.50519064013886,
+      "ci": [
+        1.195434877060567,
+        11.086855402566572
+      ],
+      "n": 845,
+      "groups": 169
+    },
+    "profit": {
+      "effect": 906.569321554607,
+      "se": 373.75331781628233,
+      "ci": [
+        168.7110563810179,
+        1644.427586728196
+      ],
+      "n": 752,
+      "groups": 169
+    },
+    "investment": {
+      "effect": 364.89495160011626,
+      "se": 180.1203952147711,
+      "ci": [
+        9.303934744232208,
+        720.4859684560004
+      ],
+      "n": 845,
+      "groups": 169
+    }
+  },
+  "reproduction": {
+    "default_52w": {
+      "paper_effect": 6.14,
+      "paper_se": 2.51,
+      "paper_n": 845,
+      "paper_ci": [
+        1.184795170230255,
+        11.095204829769745
+      ],
+      "effect_gap": 0.0011451398135697843,
+      "se_gap": -0.004809359861139839,
+      "pass": true
+    },
+    "profit": {
+      "paper_effect": 906.6,
+      "paper_se": 373.8,
+      "paper_n": 752,
+      "paper_ci": [
+        168.6495755506253,
+        1644.5504244493748
+      ],
+      "effect_gap": -0.030678445393050424,
+      "se_gap": -0.04668218371767807,
+      "pass": true
+    },
+    "investment": {
+      "paper_effect": 364.9,
+      "paper_se": 180.1,
+      "paper_n": 845,
+      "paper_ci": [
+        9.349247075087249,
+        720.4507529249126
+      ],
+      "effect_gap": -0.005048399883719412,
+      "se_gap": 0.02039521477109929,
+      "pass": true
+    }
+  },
+  "decision": {
+    "cap": 2.0,
+    "floor": 0.0,
+    "default_pass": false,
+    "profit_pass": true,
+    "pass": false
+  },
+  "pricing": {
+    "exposure": 8000,
+    "base_lgd": 0.5,
+    "scenarios": [
+      {
+        "lgd": 0.25,
+        "loss": 122.82290279627139,
+        "ci": [
+          23.90869754121134,
+          221.73710805133146
+        ]
+      },
+      {
+        "lgd": 0.5,
+        "loss": 245.64580559254279,
+        "ci": [
+          47.81739508242268,
+          443.4742161026629
+        ]
+      },
+      {
+        "lgd": 0.75,
+        "loss": 368.4687083888142,
+        "ci": [
+          71.72609262363402,
+          665.2113241539944
+        ]
+      },
+      {
+        "lgd": 1.0,
+        "loss": 491.29161118508557,
+        "ci": [
+          95.63479016484536,
+          886.9484322053258
+        ]
+      }
+    ],
+    "lender_break_even": [
+      {
+        "contribution": 0,
+        "pd_pp": 0.0
+      },
+      {
+        "contribution": 200,
+        "pd_pp": 5.0
+      }
+    ],
+    "borrower_equivalent": {
+      "pd_pp": 22.664233038865174,
+      "ci": [
+        4.217776409525448,
+        41.110689668204905
+      ],
+      "outside_feasible_range": false
+    },
+    "outstanding": {
+      "effect": 148.69448735019947,
+      "se": 83.60758522573957,
+      "ci": [
+        -16.362369269709006,
+        313.75134397010794
+      ],
+      "n": 845,
+      "groups": 169
+    }
+  },
+  "robustness": {
+    "profit_coverage": {
+      "effect": -0.6098535286285203,
+      "se": 2.1581991168021846,
+      "ci": [
+        -4.870538264557995,
+        3.650831207300955
+      ],
+      "n": 845,
+      "groups": 169
+    },
+    "profit_stress": {
+      "cutoffs": [
+        0.0,
+        13766.600000000013
+      ],
+      "scenarios": {
+        "winsor": {
+          "effect": 529.1630889351452,
+          "se": 182.05834292248684,
+          "ci": [
+            169.74620441347855,
+            888.5799734568118
+          ],
+          "n": 752,
+          "groups": 169,
+          "decision": {
+            "default_pass": false,
+            "profit_pass": true,
+            "pass": false
+          }
+        },
+        "trim": {
+          "effect": 334.9509406428972,
+          "se": 173.17606893509642,
+          "ci": [
+            -6.9306901091857185,
+            676.83257139498
+          ],
+          "n": 744,
+          "groups": 169,
+          "decision": {
+            "default_pass": false,
+            "profit_pass": false,
+            "pass": false
+          }
+        },
+        "missing_low": {
+          "effect": -1012.758696722892,
+          "se": 237.3337820638076,
+          "ci": [
+            -1481.2995346312982,
+            -544.2178588144858
+          ],
+          "n": 845,
+          "groups": 169,
+          "decision": {
+            "default_pass": false,
+            "profit_pass": false,
+            "pass": false
+          }
+        },
+        "missing_high": {
+          "effect": 2012.2270982171867,
+          "se": 247.74855918182726,
+          "ci": [
+            1523.1255615533278,
+            2501.3286348810457
+          ],
+          "n": 845,
+          "groups": 169,
+          "decision": {
+            "default_pass": false,
+            "profit_pass": true,
+            "pass": false
+          }
+        }
+      }
+    },
+    "randomization": {
+      "draws": 9999,
+      "seed": 112672,
+      "outcomes": {
+        "default_52w": {
+          "effect": 0.06141145139813582,
+          "exceedances": 266,
+          "p": 0.0267
+        },
+        "investment": {
+          "effect": 522.4814247669775,
+          "exceedances": 132,
+          "p": 0.0133
+        },
+        "profit_recorded": {
+          "effect": -0.006098535286284962,
+          "exceedances": 8271,
+          "p": 0.8272
+        }
+      }
+    }
+  }
+}

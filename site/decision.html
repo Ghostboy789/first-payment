@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <meta name="description" content="A Kolkata microfinance trial, reviewed as a credit pilot.">
+  <title>The decision · First Payment</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="theme.js" defer></script>
+  <script src="decision.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#content">Skip to content</a>
+  <header class="wrap masthead">
+    <a class="wordmark" href="index.html">First Payment</a>
+    <label class="theme" hidden>
+      <span>Theme</span>
+      <select id="theme">
+        <option value="system">System</option>
+        <option value="light">Light</option>
+        <option value="dark">Dark</option>
+      </select>
+    </label>
+    <nav aria-label="Study pages"><a href="index.html">Overview</a><a href="trial.html">The trial</a><a href="reproduction.html">Reproduction</a><a href="decision.html" aria-current=page>The decision</a><a href="pricing.html">Pricing</a><a href="robustness.html">Robustness</a><a href="limits.html">Data and limits</a></nav>
+  </header>
+  <main id="content" class="wrap" tabindex="-1">
+    <header class="page-header">
+      <p class="label">The decision</p>
+      <h1>The pilot fails its default cap.</h1>
+      <p class="lede">Compare the confidence interval endpoints with the thresholds. Both checks must pass.</p>
+    </header>
+    <section class="decision-lab" aria-labelledby="lab-heading"
+      data-upper="11.086855402566572" data-lower="168.7110563810179">
+      <div class="lab-head">
+        <div><h2 id="lab-heading">Test a risk tolerance</h2>
+        <p class="note">The shaded band is the estimate’s 95% interval.
+        The vertical line is the threshold.</p></div>
+        <button type="button" id="reset" hidden>Reset thresholds</button>
+      </div>
+      <div class="gate" data-passing="false">
+          <h3><label for="default-limit">Maximum extra default</label></h3>
+          <p id="default-evidence" class="note">95% CI 1.20 to 11.09 pp ·
+          Upper bound <strong>11.09 pp</strong>
+          · n=845</p>
+          <div class="control-line" hidden>
+            <span>Scenario threshold</span>
+            <span id="default-value">2.00 pp</span>
+          </div>
+          <div class="band" aria-hidden="true" style="--low:5.977174%;--high:55.434277%;
+          --threshold:10.000000%"><span></span></div>
+          <input id="default-limit" type="range" min="0" max="20" step="0.01" value="2.0"
+            aria-describedby="default-evidence" hidden>
+          <div class="axis" aria-hidden="true"><span>0</span><span>20 pp</span></div>
+          <p class="gate-result"><strong id="default-status">FAIL</strong></p>
+        </div><div class="gate" data-passing="true">
+          <h3><label for="profit-limit">Minimum weekly profit gain</label></h3>
+          <p id="profit-evidence" class="note">95% CI 168.7 to 1,644.4 ₹/week ·
+          Lower bound <strong>168.7 ₹/week</strong>
+          · n=752</p>
+          <div class="control-line" hidden>
+            <span>Scenario threshold</span>
+            <span id="profit-value">0.0 ₹/week</span>
+          </div>
+          <div class="band" aria-hidden="true" style="--low:8.435553%;--high:82.221379%;
+          --threshold:0.000000%"><span></span></div>
+          <input id="profit-limit" type="range" min="0" max="2000" step="1" value="0.0"
+            aria-describedby="profit-evidence" hidden>
+          <div class="axis" aria-hidden="true"><span>0</span><span>2,000 ₹/week</span></div>
+          <p class="gate-result"><strong id="profit-status">PASS</strong></p>
+        </div>
+      <div class="verdict" role="status" aria-live="polite" aria-atomic="true">
+        <strong id="joint-status">Pilot FAIL</strong>
+        <span id="joint-detail">Preset default cap 2.00 pp ·
+        profit must exceed ₹0/week.</span>
+      </div>
+      <p id="slider-fallback" class="note">Turn on JavaScript to change the thresholds.</p>
+    </section>
+    <section class="chapter"><h2>How to read it</h2><div>
+      <p>Extra default clears its gate when the upper endpoint is within the cap.
+      The profit gate requires the lower endpoint to be strictly above the floor.</p>
+      <p>The pilot starts at two extra defaults per 100 borrowers and credible positive profit.
+      Changing the sliders tests a scenario. The original decision stays fixed.</p>
+    </div></section>
+    <div class="next">
+      <a href="pricing.html">Next · Pricing</a>
+    </div>
+  </main>
+  <footer class="wrap masthead footer">
+    <a href="https://github.com/Ghostboy789">Medhansh Shekhawat</a>
+    <a href="https://doi.org/10.1257/aer.103.6.2196">Trial paper</a>
+    <a href="https://doi.org/10.3886/E112672V1">Replication deposit</a>
+  </footer>
+</body>
+</html>

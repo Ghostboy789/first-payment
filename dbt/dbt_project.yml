@@ -1,0 +1,14 @@
+name: first_payment
+version: "1.0.0"
+config-version: 2
+profile: first_payment
+
+model-paths:
+  - models
+
+models:
+  first_payment:
+    staging:
+      +materialized: view
+    marts:
+      +materialized: table
