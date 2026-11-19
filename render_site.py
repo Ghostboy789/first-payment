@@ -169,7 +169,7 @@ def trial(results):
     blocks = trial_data["blocks"]
     coverage_rows = [
         ("Default observed / missing", "default_observed"),
-        ("Loan spending observed / missing", "investment_observed"),
+        ("Deposited loan spending observed / missing", "investment_observed"),
         ("Profit observed / missing", "profit_observed"),
         ("Survey 3 income item observed / missing", "income_observed"),
     ]
@@ -422,6 +422,12 @@ def pricing_page(results):
 
 def robustness(results):
     rob = results["robustness"]
+    investment = rob["investment_unflagged"]
+    investment_interval = (
+        "The 95% interval stays above zero."
+        if investment["positive_interval"]
+        else "The 95% interval fails the positive-effect check."
+    )
     stress = rob["profit_stress"]
     names = {
         "winsor": "Winsorized profit",
@@ -478,12 +484,24 @@ def robustness(results):
       <p>Each of the {ri["draws"]:,} simulated draws preserves the grace group count in each
       batch. The statistic is the absolute batch-adjusted effect. The loan-spending check
       uses the batch-only model. The profit test is for whether a value was recorded.</p>
+    </section>
+    <section id="loan-use" class="chapter"><h2>Loan-use coverage</h2><div>
+      <p>After excluding flagged records, the estimated change in business spending was
+      {signed(investment["effect"], 1)} ₹/loan (95% CI {interval(investment["ci"], 1)} ₹/loan,
+      n={investment["n"]}). {investment_interval}</p>
+      <p>This follow-up check uses the released flag to select records and adjusts for batch and
+      loan size. The provenance of the selected records is uncertain. See the
+      <a href="limits.html#loan-use-source">loan-use source notes</a>.</p>
+    </div>
     </section>"""
     )
 
 
 def data_page(results):
-    total = sum(arm["borrowers"] for arm in results["trial"]["availability"])
+    arms = results["trial"]["availability"]
+    total = sum(arm["borrowers"] for arm in arms)
+    flagged = sum(arm["loan_use_flagged"] for arm in arms)
+    unflagged = total - flagged
     return (
         page_header(
             "limits",
@@ -499,9 +517,20 @@ def data_page(results):
       <p>The experiment compares assignment to whole contracts. The grace arm also had a longer
       maturity and a lower effective interest rate. Evidence comes from loans assigned in 2007
       at one Kolkata lender. Applying it to another product or cohort would require new data.</p>
-      <p>Reported business profit is available for a subset. The paper’s text reports 93% loan-use
-      survey coverage, while Table 1 and the deposited outcome use all {total} rows.
-      The deposited matching flag is used as coded. Its exact construction is unresolved.</p>
+      <p>Reported business profit is available for a subset of borrowers.</p>
+    </div></section>
+    <section id="loan-use-source" class="chapter"><h2>Loan-use survey coverage</h2><div>
+      <p>The paper’s methods report 93% completion for the Survey 2 loan-use module.
+      The Table 1 note says all clients completed it. The deposit confirms that the regression
+      used {total} records with a value for business spending.</p>
+      <p>The Table 1 script adjusts for a flag that marks {flagged} records. Its regular-contract
+      reference mean excludes those marked records. The {unflagged} unflagged records are
+      {unflagged / total:.1%} of the file, which matches the reported completion rate after
+      rounding. The deposit and appendix leave the flag’s meaning and survey provenance
+      uncertain.</p>
+      <p><a href="robustness.html#loan-use">See the estimate after excluding flagged records</a></p>
+      <p><a href="{PAPER}">Paper, Section II.A and Table 1</a> ·
+      <a href="https://www.aeaweb.org/articles/materials/2402">Supplemental appendix</a></p>
     </div></section>
     <section class="chapter"><h2>Data and code</h2><div>
       <p>Source data by Erica Field, Rohini Pande, John Papp and Natalia Rigol, published by the

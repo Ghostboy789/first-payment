@@ -21,6 +21,18 @@ Published references are Tables 1–3 of the original study. [Trial paper](https
 
 ## Coverage and sensitivity
 
+The paper’s methods report 93% completion of the Survey 2 loan-use module. The Table 1 note
+says every client completed it. The replication file confirms 845 usable business-spending
+values. Its Table 1 script adjusts for a flag marking 59 borrowers and computes the regular
+reference mean from unflagged borrowers. The 786 unflagged records represent 93.0% of the
+released cohort, matching the reported completion rate after rounding. These are file counts.
+The deposit and appendix leave the flag’s meaning and interview provenance uncertain.
+[Trial paper, Section II.A and Table 1](https://doi.org/10.1257/aer.103.6.2196) · [Supplemental appendix](https://www.aeaweb.org/articles/materials/2402) · [AEA deposit](https://doi.org/10.3886/E112672V1)
+
+Excluding flagged records in a follow-up check gives an investment estimate of ₹343.7 more
+per loan (95% CI −₹19.0 to ₹706.5, n=786). The interval crosses zero. This fit measures
+sensitivity to the sample restriction. The pilot rule uses profit and default.
+
 Profit was available for 379 of 425 regular borrowers and 373 of 420 grace borrowers. The
 adjusted difference in recording was −0.61 percentage points (95% CI −4.87 to 3.65, n=845).
 An income item was available for 387 regular and 382 grace borrowers. It is a follow-up proxy.
@@ -60,9 +72,7 @@ the credit loss falls on the lender on the trial loan. The comparison illustrate
 ## Interpretation
 
 The trial compares entire contracts, including maturity and effective interest. It concerns
-one lender in Kolkata and a cohort assigned in 2007. The text reports 93% loan-use survey
-coverage while Table 1 and the deposit use 845 outcome rows. The deposited outcome was complete.
-The construction of its matching flag remains unresolved. [Trial paper](https://doi.org/10.1257/aer.103.6.2196) · [AEA deposit](https://doi.org/10.3886/E112672V1)
+one lender in Kolkata and a cohort assigned in 2007. [Trial paper](https://doi.org/10.1257/aer.103.6.2196)
 
 The analysis plan was the first commit. A separate calculation from the Stata file checked the
 published aggregates using residualized least squares, an explicit cluster variance and

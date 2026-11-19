@@ -242,6 +242,17 @@
     }
   },
   "robustness": {
+    "investment_unflagged": {
+      "effect": 343.73510912935166,
+      "se": 183.7564785578297,
+      "ci": [
+        -19.034209616161604,
+        706.5044278748649
+      ],
+      "n": 786,
+      "groups": 169,
+      "positive_interval": false
+    },
     "profit_coverage": {
       "effect": -0.6098535286285203,
       "se": 2.1581991168021846,

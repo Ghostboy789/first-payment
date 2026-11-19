@@ -79,6 +79,10 @@ def test_synthetic_archive_to_site(tmp_path, monkeypatch):
     assert result["estimates"]["default_52w"]["effect"] == pytest.approx(20)
     assert result["estimates"]["profit"]["effect"] == pytest.approx(25)
     assert result["estimates"]["investment"]["effect"] == pytest.approx(100)
+    restricted = result["robustness"]["investment_unflagged"]
+    assert restricted["n"] == 32
+    assert restricted["effect"] == pytest.approx(100)
+    assert restricted["positive_interval"] is True
     assert result["trial"]["balance"]["age"]["n"] == 32
     assert result["trial"]["availability"][0]["income_without_profit"] == 4
     assert result["robustness"]["randomization"]["outcomes"]["profit_recorded"]["p"] == 1

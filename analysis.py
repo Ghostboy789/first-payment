@@ -155,11 +155,13 @@ def randomization(data, groups, *, draws=RI_DRAWS, seed=RI_SEED):
 def summarize(data, groups, availability):
     default = fit(data, "default_52w", scale=100)
     profit = fit(data, "profit")
+    loan_size = " + C(loan_size, Treatment(reference=10000))"
     investment = fit(
         data,
         "investment",
-        controls=" + loan_use_flag + C(loan_size, Treatment(reference=10000))",
+        controls=" + loan_use_flag" + loan_size,
     )
+    unflagged = fit(data.loc[data.loan_use_flag.eq(0)], "investment", controls=loan_size)
     estimates = {"default_52w": default, "profit": profit, "investment": investment}
     decision = pilot(default["ci"][1], profit["ci"][0])
     return {
@@ -184,6 +186,7 @@ def summarize(data, groups, availability):
         "decision": {"cap": DEFAULT_CAP, "floor": PROFIT_FLOOR, **decision},
         "pricing": {**pricing(default, profit), "outstanding": fit(data, "outstanding_52w")},
         "robustness": {
+            "investment_unflagged": {**unflagged, "positive_interval": unflagged["ci"][0] > 0},
             "profit_coverage": fit(data, "profit_recorded", scale=100),
             "profit_stress": stress_profit(data, default["ci"][1]),
             "randomization": randomization(data, groups),
