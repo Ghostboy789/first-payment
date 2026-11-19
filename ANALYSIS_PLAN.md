@@ -42,3 +42,18 @@ Compare this one-time lender loss with one week of the estimated borrower profit
 ## Sources
 
 Field, Pande, Papp and Rigol (2013), *American Economic Review* 103(6), 2196–2226. [Paper](https://doi.org/10.1257/aer.103.6.2196) · [AEA data and code, project 112672 V1](https://doi.org/10.3886/E112672V1)
+
+## Follow-up on loan-use coverage
+
+Added on 19 November 2026 after the primary results and before running the subset model below.
+Section II.A reports 93% Survey 2 loan-use coverage. Table 1 fits 845 records. The released
+flag `Match3rd_in3rd` equals zero for 786 of 845 borrowers (93.0%). This is a numerical match.
+The deposit does not establish which records came from original Survey 2 interviews.
+
+Run one exploratory sensitivity on the Table 1 investment outcome. Exclude records where
+`Match3rd_in3rd = 1`. Refit the original borrower-level regression with batch and loan-size
+fixed effects, omitting the now-constant flag. Use the same loan-group clustered CR1 95% t
+interval. Report n, effect and interval, and report whether the interval still lies entirely
+above zero. This is a comparison of fitted results under a sample restriction. The provenance
+and selection of the restricted sample are unverified. The full-record fit remains the paper
+comparison. This check has no role in the profit and default pilot rule.
