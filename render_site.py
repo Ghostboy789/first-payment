@@ -5,6 +5,7 @@ import json
 from config import SITE_DIR
 
 PAPER = "https://doi.org/10.1257/aer.103.6.2196"
+AEA_ARTICLE = "https://www.aeaweb.org/articles?id=10.1257/aer.103.6.2196"
 DEPOSIT = "https://doi.org/10.3886/E112672V1"
 PAGES = {
     "index": "Overview",
@@ -98,7 +99,8 @@ def shell(slug, body):
   <footer class="wrap masthead footer">
     <a href="https://github.com/Ghostboy789">Medhansh Shekhawat</a>
     <a href="{PAPER}">Trial paper</a>
-    <a href="{DEPOSIT}">Replication deposit</a>
+    <a href="{AEA_ARTICLE}">AEA article page</a>
+    <a href="{DEPOSIT}">openICPSR project 112672 V1</a>
   </footer>
 </body>
 </html>
@@ -405,9 +407,9 @@ def pricing_page(results):
       (95% CI ₹{interval(out["ci"], 1)}, n={out["n"]}). That balance can still be recovered.</p>
     </section>
     <section class="chapter wide"><h2>Where loss breaks even</h2>
+      <p class="formula">contribution ÷ (exposure × loss given default)</p>
       {break_even}
-      <p>Break-even equals the lender’s additional contribution divided by exposure times loss
-      given default. Both illustrative thresholds fall below the trial’s upper default bound.</p>
+      <p>Both illustrative thresholds fall below the trial’s upper default bound.</p>
       <p>The borrower profit gain was ₹{number(profit["effect"], 1)} per week
       (95% CI ₹{interval(profit["ci"], 1)}, n={profit["n"]}). Using that one week as a hypothetical
       budget implies {number(proxy["pd_pp"])} pp (95% CI {interval(proxy["ci"])} pp).{feasibility}

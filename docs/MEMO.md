@@ -8,7 +8,7 @@ Evidence comes from borrowers of one lender. [Trial paper](https://doi.org/10.12
 
 | Preset gate | What the trial found | Result |
 | --- | --- | --- |
-| Weekly profit lower 95% bound above ₹0 | ₹906.6 more per week (95% CI ₹168.7 to ₹1,644.4, n=752) | PASS |
+| Weekly profit lower 95% bound above ₹0 | ₹906.6 more per week among borrowers with recorded profit (95% CI ₹168.7 to ₹1,644.4, n=752) | PASS |
 | Extra default upper 95% bound at most 2.00 percentage points | 6.14 points higher at 52 weeks past due (95% CI 1.20 to 11.09, n=845) | FAIL |
 
 The 2-point cap is an illustrative risk budget fixed in the analysis plan. Default means full

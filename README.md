@@ -7,13 +7,16 @@ among borrowers with recorded profit (95% CI ₹168.7 to ₹1,644.4, n=752). Def
 percentage points at 52 weeks past due (95% CI 1.20 to 11.09, n=845). The upper endpoint exceeded
 the preset 2.00-point cap. Both the positive-profit and default checks had to pass.
 
-[Open the site](site/index.html) · [Findings](docs/FINDINGS.md) ·
+The trial compares bundled contracts at one lender, with the grace period, maturity and
+effective interest rate changing together, and missing follow-up leaves the effect on
+full-cohort profit unresolved.
+
+[Site files](site/index.html) · [Findings](docs/FINDINGS.md) ·
 [Committee memo](docs/MEMO.md) · [Analysis plan](ANALYSIS_PLAN.md)
 
 The build reproduces three rows from Field, Pande, Papp and Rigol, then applies a fixed pilot
 rule, prices the incremental credit loss and stresses profit tails and missing outcomes.
-The site includes two sliders for testing other caps and profit floors. Assignment compares
-whole contracts, including payment timing, maturity and effective interest.
+The site includes two sliders for testing other caps and profit floors.
 
 ## Run locally
 

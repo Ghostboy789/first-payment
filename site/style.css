@@ -342,20 +342,20 @@ button:hover { border-color: var(--accent); }
   position: relative;
   height: 0.9rem;
   margin-block-start: 0.65rem;
-  background: var(--rail);
+  background: light-dark(var(--rail), #2d2041);
   margin-inline: 0.55rem;
 }
 .band span {
   position: absolute;
   inset: 0 calc(100% - var(--high)) 0 var(--low);
-  background: var(--accent);
+  background: light-dark(var(--accent), #ab89ce);
   opacity: 0.66;
 }
 .band::after {
   content: "";
   position: absolute;
   inset: -0.24rem auto -0.24rem var(--threshold);
-  border-left: 2px solid var(--ink);
+  border-left: 2px solid light-dark(var(--ink), #fff);
 }
 .gate input {
   display: block;
