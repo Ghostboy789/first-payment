@@ -6,22 +6,31 @@
   <meta name="color-scheme" content="light dark">
   <meta name="description" content="A Kolkata microfinance trial, reviewed as a credit pilot.">
   <title>Reproduction · First Payment</title>
+  <script src="theme.js"></script>
   <link rel="stylesheet" href="style.css">
-  <script src="theme.js" defer></script>
+  <script src="story.js" defer></script>
 </head>
-<body>
+<body class="detail">
+  <div class="mesh" aria-hidden="true"><i></i><i></i><i></i></div>
   <a class="skip" href="#content">Skip to content</a>
-  <header class="wrap masthead">
-    <a class="wordmark" href="index.html">First Payment</a>
-    <label class="theme" hidden>
-      <span>Theme</span>
-      <select id="theme">
-        <option value="system">System</option>
-        <option value="light">Light</option>
-        <option value="dark">Dark</option>
-      </select>
-    </label>
-    <nav aria-label="Study pages"><a href="index.html">Overview</a><a href="trial.html">The trial</a><a href="reproduction.html" aria-current=page>Reproduction</a><a href="decision.html">The decision</a><a href="pricing.html">Pricing</a><a href="robustness.html">Robustness</a><a href="limits.html">Data and limits</a></nav>
+  <header class="nav-shell">
+    <div class="glass nav-pill">
+      <a class="wordmark" href="index.html">
+        <span class="mark" aria-hidden="true"></span>First Payment</a>
+      <nav class="nav-wide" aria-label="Study pages"><a href="index.html">Overview</a><a href="trial.html">The trial</a><a href="reproduction.html" aria-current=page>Reproduction</a><a href="decision.html">The decision</a><a href="pricing.html">Pricing</a><a href="robustness.html">Robustness</a><a href="limits.html">Data and limits</a></nav>
+      <details class="nav-menu">
+        <summary>Pages</summary>
+        <nav class="glass" aria-label="Study pages"><a href="index.html">Overview</a><a href="trial.html">The trial</a><a href="reproduction.html" aria-current=page>Reproduction</a><a href="decision.html">The decision</a><a href="pricing.html">Pricing</a><a href="robustness.html">Robustness</a><a href="limits.html">Data and limits</a></nav>
+      </details>
+      <label class="theme" hidden>
+        <span class="sr-only">Theme</span><span class="theme-icon" aria-hidden="true"></span>
+        <select id="theme">
+          <option value="system">System</option>
+          <option value="light">Light</option>
+          <option value="dark">Dark</option>
+        </select>
+      </label>
+    </div>
   </header>
   <main id="content" class="wrap" tabindex="-1">
     <header class="page-header">
@@ -29,22 +38,23 @@
       <h1>Three estimates, checked against the paper.</h1>
       <p class="lede">3 of 3 comparisons met the preset rule for the coefficient, standard error and sample size.</p>
     </header>
-    <section class="chapter wide"><h2>Published and rebuilt</h2>
-      <table role="table"><caption>Paper intervals approximate the printed assignment effects.</caption><thead role="rowgroup"><tr role="row"><th scope="col" role="columnheader">Outcome</th><th scope="col" role="columnheader">Paper and 95% CI</th><th scope="col" role="columnheader">Rebuilt and 95% CI</th><th scope="col" role="columnheader">SE, paper / rebuilt</th><th scope="col" role="columnheader">Gaps, effect / SE</th><th scope="col" role="columnheader">n, paper / rebuilt</th><th scope="col" role="columnheader">Match</th></tr></thead><tbody role="rowgroup"><tr role="row"><th scope="row" role="rowheader">Default at 52 weeks past due (pp)</th><td role="cell"><span class="cell-label" aria-hidden="true">Paper and 95% CI</span>+6.14<br>1.18 to 11.10</td><td role="cell"><span class="cell-label" aria-hidden="true">Rebuilt and 95% CI</span>+6.14<br>1.20 to 11.09</td><td role="cell"><span class="cell-label" aria-hidden="true">SE, paper / rebuilt</span>2.51 / 2.51</td><td role="cell"><span class="cell-label" aria-hidden="true">Gaps, effect / SE</span>+0.0011 / −0.0048</td><td role="cell"><span class="cell-label" aria-hidden="true">n, paper / rebuilt</span>845 / 845</td><td role="cell"><span class="cell-label" aria-hidden="true">Match</span>PASS</td></tr><tr role="row"><th scope="row" role="rowheader">Weekly business profit (₹/week)</th><td role="cell"><span class="cell-label" aria-hidden="true">Paper and 95% CI</span>+906.6<br>168.6 to 1,644.6</td><td role="cell"><span class="cell-label" aria-hidden="true">Rebuilt and 95% CI</span>+906.6<br>168.7 to 1,644.4</td><td role="cell"><span class="cell-label" aria-hidden="true">SE, paper / rebuilt</span>373.8 / 373.8</td><td role="cell"><span class="cell-label" aria-hidden="true">Gaps, effect / SE</span>−0.0307 / −0.0467</td><td role="cell"><span class="cell-label" aria-hidden="true">n, paper / rebuilt</span>752 / 752</td><td role="cell"><span class="cell-label" aria-hidden="true">Match</span>PASS</td></tr><tr role="row"><th scope="row" role="rowheader">Loan spending on the business (₹/loan)</th><td role="cell"><span class="cell-label" aria-hidden="true">Paper and 95% CI</span>+364.9<br>9.3 to 720.5</td><td role="cell"><span class="cell-label" aria-hidden="true">Rebuilt and 95% CI</span>+364.9<br>9.3 to 720.5</td><td role="cell"><span class="cell-label" aria-hidden="true">SE, paper / rebuilt</span>180.1 / 180.1</td><td role="cell"><span class="cell-label" aria-hidden="true">Gaps, effect / SE</span>−0.0050 / +0.0204</td><td role="cell"><span class="cell-label" aria-hidden="true">n, paper / rebuilt</span>845 / 845</td><td role="cell"><span class="cell-label" aria-hidden="true">Match</span>PASS</td></tr></tbody></table>
+    <section data-reveal class="chapter wide"><h2>Published and rebuilt</h2>
+      <div class="glass table-wrap"><table role="table"><caption>Paper intervals approximate the printed assignment effects.</caption><thead role="rowgroup"><tr role="row"><th scope="col" role="columnheader">Outcome</th><th scope="col" role="columnheader">Paper and 95% CI</th><th scope="col" role="columnheader">Rebuilt and 95% CI</th><th scope="col" role="columnheader">SE, paper / rebuilt</th><th scope="col" role="columnheader">Gaps, effect / SE</th><th scope="col" role="columnheader">n, paper / rebuilt</th><th scope="col" role="columnheader">Match</th></tr></thead><tbody role="rowgroup"><tr role="row"><th scope="row" role="rowheader">Default at 52 weeks past due (pp)</th><td role="cell"><span class="cell-label" aria-hidden="true">Paper and 95% CI</span><span>+6.14<br>1.18 to 11.10</span></td><td role="cell"><span class="cell-label" aria-hidden="true">Rebuilt and 95% CI</span><span>+6.14<br>1.20 to 11.09</span></td><td role="cell"><span class="cell-label" aria-hidden="true">SE, paper / rebuilt</span><span>2.51 / 2.51</span></td><td role="cell"><span class="cell-label" aria-hidden="true">Gaps, effect / SE</span><span>+0.0011 / −0.0048</span></td><td role="cell"><span class="cell-label" aria-hidden="true">n, paper / rebuilt</span><span>845 / 845</span></td><td role="cell"><span class="cell-label" aria-hidden="true">Match</span><span>PASS</span></td></tr><tr role="row"><th scope="row" role="rowheader">Weekly business profit (₹/week)</th><td role="cell"><span class="cell-label" aria-hidden="true">Paper and 95% CI</span><span>+906.6<br>168.6 to 1,644.6</span></td><td role="cell"><span class="cell-label" aria-hidden="true">Rebuilt and 95% CI</span><span>+906.6<br>168.7 to 1,644.4</span></td><td role="cell"><span class="cell-label" aria-hidden="true">SE, paper / rebuilt</span><span>373.8 / 373.8</span></td><td role="cell"><span class="cell-label" aria-hidden="true">Gaps, effect / SE</span><span>−0.0307 / −0.0467</span></td><td role="cell"><span class="cell-label" aria-hidden="true">n, paper / rebuilt</span><span>752 / 752</span></td><td role="cell"><span class="cell-label" aria-hidden="true">Match</span><span>PASS</span></td></tr><tr role="row"><th scope="row" role="rowheader">Loan spending on the business (₹/loan)</th><td role="cell"><span class="cell-label" aria-hidden="true">Paper and 95% CI</span><span>+364.9<br>9.3 to 720.5</span></td><td role="cell"><span class="cell-label" aria-hidden="true">Rebuilt and 95% CI</span><span>+364.9<br>9.3 to 720.5</span></td><td role="cell"><span class="cell-label" aria-hidden="true">SE, paper / rebuilt</span><span>180.1 / 180.1</span></td><td role="cell"><span class="cell-label" aria-hidden="true">Gaps, effect / SE</span><span>−0.0050 / +0.0204</span></td><td role="cell"><span class="cell-label" aria-hidden="true">n, paper / rebuilt</span><span>845 / 845</span></td><td role="cell"><span class="cell-label" aria-hidden="true">Match</span><span>PASS</span></td></tr></tbody></table></div>
       <p>Gaps are rebuilt minus paper. The matching tolerance was half the last printed unit.
       All three fits use batch fixed effects and loan-group clustered uncertainty. The investment
       fit also adjusts for loan size and the deposited matching flag.</p>
-      <p><a href="https://doi.org/10.1257/aer.103.6.2196">Field, Pande, Papp and Rigol · Tables 1–3</a></p>
+      <p><a href="https://www.aeaweb.org/articles?id=10.1257/aer.103.6.2196">Field, Pande, Papp and Rigol · Tables 1–3</a></p>
     </section>
-    <div class="next">
-      <a href="decision.html">Next · The decision</a>
-    </div>
+    <div class="next"><a class="action" href="decision.html">Next · The decision</a></div>
   </main>
-  <footer class="wrap masthead footer">
-    <a href="https://github.com/Ghostboy789">Medhansh Shekhawat</a>
-    <a href="https://doi.org/10.1257/aer.103.6.2196">Trial paper</a>
-    <a href="https://www.aeaweb.org/articles?id=10.1257/aer.103.6.2196">AEA article page</a>
-    <a href="https://doi.org/10.3886/E112672V1">openICPSR project 112672 V1</a>
+  <footer class="wrap footer">
+    <div><strong>First Payment</strong><p>By Medhansh Shekhawat</p></div>
+    <div class="footer-links">
+      <a href="https://www.aeaweb.org/articles?id=10.1257/aer.103.6.2196">AEA article page</a>
+      <a href="https://doi.org/10.3886/E112672V1">openICPSR project 112672 V1</a>
+      <a href="https://github.com/Ghostboy789">GitHub</a>
+      <a href="https://in.linkedin.com/in/medhansh-shekhawat">LinkedIn</a>
+    </div>
   </footer>
 </body>
 </html>

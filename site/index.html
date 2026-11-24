@@ -6,76 +6,241 @@
   <meta name="color-scheme" content="light dark">
   <meta name="description" content="A Kolkata microfinance trial, reviewed as a credit pilot.">
   <title>Overview · First Payment</title>
+  <script src="theme.js"></script>
   <link rel="stylesheet" href="style.css">
-  <script src="theme.js" defer></script>
+  <script src="story.js" defer></script>
+  <script src="decision.js" defer></script>
 </head>
-<body>
+<body class="overview">
+  <div class="mesh" aria-hidden="true"><i></i><i></i><i></i></div>
   <a class="skip" href="#content">Skip to content</a>
-  <header class="wrap masthead">
-    <a class="wordmark" href="index.html">First Payment</a>
-    <label class="theme" hidden>
-      <span>Theme</span>
-      <select id="theme">
-        <option value="system">System</option>
-        <option value="light">Light</option>
-        <option value="dark">Dark</option>
-      </select>
-    </label>
-    <nav aria-label="Study pages"><a href="index.html" aria-current=page>Overview</a><a href="trial.html">The trial</a><a href="reproduction.html">Reproduction</a><a href="decision.html">The decision</a><a href="pricing.html">Pricing</a><a href="robustness.html">Robustness</a><a href="limits.html">Data and limits</a></nav>
+  <header class="nav-shell">
+    <div class="glass nav-pill">
+      <a class="wordmark" href="index.html">
+        <span class="mark" aria-hidden="true"></span>First Payment</a>
+      <nav class="nav-wide" aria-label="Study pages"><a href="index.html" aria-current=page>Overview</a><a href="trial.html">The trial</a><a href="reproduction.html">Reproduction</a><a href="decision.html">The decision</a><a href="pricing.html">Pricing</a><a href="robustness.html">Robustness</a><a href="limits.html">Data and limits</a></nav>
+      <details class="nav-menu">
+        <summary>Pages</summary>
+        <nav class="glass" aria-label="Study pages"><a href="index.html" aria-current=page>Overview</a><a href="trial.html">The trial</a><a href="reproduction.html">Reproduction</a><a href="decision.html">The decision</a><a href="pricing.html">Pricing</a><a href="robustness.html">Robustness</a><a href="limits.html">Data and limits</a></nav>
+      </details>
+      <label class="theme" hidden>
+        <span class="sr-only">Theme</span><span class="theme-icon" aria-hidden="true"></span>
+        <select id="theme">
+          <option value="system">System</option>
+          <option value="light">Light</option>
+          <option value="dark">Dark</option>
+        </select>
+      </label>
+    </div>
   </header>
   <main id="content" class="wrap" tabindex="-1">
     <section class="hero" aria-labelledby="headline">
-      <div>
-        <p class="label">Kolkata · Microfinance</p>
-        <h1 id="headline">When should the first payment be due?</h1>
-        <p class="lede">A longer wait before repayment raised reported weekly business profit
-        among borrowers with follow-up data. The estimated rise in default was too large for
-        this pilot rule.</p>
-        <a class="primary" href="decision.html">Try the risk-tolerance sliders</a>
+      <div class="hero-copy">
+        <p class="label">Kolkata microfinance trial</p>
+        <h1 id="headline">Two months<br>of grace.</h1>
+        <p class="hero-question">Would you approve it?</p>
+        <p class="lede">A randomized trial gave borrowers a longer wait before their first payment.
+        The new contract changed both business profit and credit risk.</p>
+        <a class="action primary" href="#outcomes">See the results</a>
       </div>
-      <div>
-        <figure class="schedule" aria-labelledby="schedule-title">
-          <h2 id="schedule-title">When repayment started</h2>
-          <p class="schedule-origin"><span aria-hidden="true"></span> Loan disbursed</p>
-          <div class="arm arm-regular">
-            <div class="arm-label"><strong>Regular</strong><span>After two weeks</span></div>
-            <div class="track" aria-hidden="true"><span></span></div>
+      <div class="hero-object">
+        <div class="ledger-orbit" aria-hidden="true"></div>
+        <div class="glass ledger-layer ledger-bottom" aria-hidden="true"></div>
+        <div class="glass ledger-layer ledger-middle" aria-hidden="true"></div>
+        <figure class="glass schedule">
+          <figcaption>First payment due</figcaption>
+          <div class="schedule-row">
+            <div><span>Regular contract</span><strong>Two weeks</strong></div>
+            <i class="schedule-track" aria-hidden="true"></i>
           </div>
-          <div class="arm arm-grace">
-            <div class="arm-label"><strong>Grace period</strong><span>After two months</span></div>
-            <div class="track" aria-hidden="true"><span></span></div>
+          <div class="schedule-row grace">
+            <div><span>Grace contract</span><strong>Two months</strong></div>
+            <i class="schedule-track" aria-hidden="true"></i>
           </div>
-          <figcaption>Approximate schedule. Both contracts used fortnightly
-          instalments.</figcaption>
+          <p>After disbursement · fortnightly instalments</p>
         </figure>
-        <p class="verdict"><strong>Pilot FAIL</strong>
-        <span>Default upper bound 11.09 pp · cap 2.00 pp</span>
-        </p>
       </div>
     </section>
-    <section class="chapter" aria-labelledby="readout">
-      <h2 id="readout">What changed</h2>
-      <div>
-        <dl class="metrics"><div><dt>Default at 52 weeks past due</dt>
-          <dd><strong>+6.14</strong> pp</dd>
-          <dd class="note">95% CI 1.20 to 11.09 · n=845</dd></div><div><dt>Weekly business profit</dt>
-          <dd><strong>+906.6</strong> ₹/week</dd>
-          <dd class="note">95% CI 168.7 to 1,644.4 · n=752</dd></div><div><dt>Loan spending on the business</dt>
-          <dd><strong>+364.9</strong> ₹/loan</dd>
-          <dd class="note">95% CI 9.3 to 720.5 · n=845</dd></div></dl>
-        <p class="note">Effects compare assignment to the two contracts. The profit measure was
-        taken around three years after disbursement.</p>
+
+    <section class="scene" id="outcomes" aria-labelledby="outcome-title">
+      <div class="scene-head" data-reveal>
+        <p class="label">Trial results</p>
+        <h2 id="outcome-title">Profit rose.<br>So did default.</h2>
+      </div>
+      <div class="metrics" data-reveal>
+        <article class="glass metric profit">
+      <h3>Weekly business profit</h3>
+      <p class="metric-value"><span class="sr-only">+906.6</span><span
+        aria-hidden="true" data-count="906.569321554607" data-start="168.7110563810179" data-digits="1">
+        +906.6</span> <span class="metric-unit">₹/week</span></p>
+      <div class="interval" aria-hidden="true"
+        style="--left:10.259561%;--width:89.740439%;--dot:55.129781%"><i></i><b></b></div>
+      <p class="metric-evidence">95% CI 168.7 to 1,644.4 ₹/week
+        <span>·</span> n=752</p>
+    </article>
+        <article class="glass metric risk">
+      <h3>Default at 52 weeks past due</h3>
+      <p class="metric-value"><span class="sr-only">+6.14</span><span
+        aria-hidden="true" data-count="6.1411451398135695" data-start="1.195434877060567" data-digits="2">
+        +6.14</span> <span class="metric-unit">pp</span></p>
+      <div class="interval" aria-hidden="true"
+        style="--left:10.782452%;--width:89.217548%;--dot:55.391226%"><i></i><b></b></div>
+      <p class="metric-evidence">95% CI 1.20 to 11.09 pp
+        <span>·</span> n=845</p>
+    </article>
+      </div>
+      <p class="note scene-note">Effects compare assignment to the two contracts. Profit was
+      recorded for a subset of borrowers around three years after disbursement.
+      pp means percentage points.</p>
+    </section>
+
+    <section class="scene" aria-labelledby="rule-title" data-reveal>
+      <div class="scene-head">
+        <p class="label">The preset rule</p>
+        <h2 id="rule-title">Two checks.<br>Both must pass.</h2>
+        <p class="lede">The default cap and profit floor were set before looking at the results.</p>
+      </div>
+      <div class="rules glass">
+        <div class="rule risk">
+          <span>Default cap</span>
+          <strong>2.00 pp</strong>
+          <p>The upper end of the 95% default interval must be at or below the cap.</p>
+        </div>
+        <div class="rule profit">
+          <span>Profit floor</span>
+          <strong>₹0<small>/week</small></strong>
+          <p>The lower end of the 95% profit interval must be strictly above the floor.</p>
+        </div>
       </div>
     </section>
-    <div class="next">
-      <a href="trial.html">Next · The trial</a>
-    </div>
+
+    <section class="scene verdict-scene" aria-labelledby="verdict-title" data-reveal>
+      <div class="verdict-glow" aria-hidden="true"></div>
+      <p class="label">Preset pilot verdict</p>
+      <h2 id="verdict-title" class="verdict-word" data-passing="false">
+        FAIL
+      </h2>
+      <div class="verdict-summary">
+        <div><span>Default · FAIL</span>
+          <p><strong>11.09 pp</strong> upper bound</p></div>
+        <div><span>Profit · PASS</span>
+          <p><strong>₹168.7/week</strong> lower bound</p></div>
+      </div>
+    </section>
+
+    <section class="scene lab-scene" id="scenario"
+      aria-labelledby="lab-heading" data-reveal>
+      <div class="scene-head">
+        <p class="label">Decision simulator</p>
+        <h2 id="lab-heading">Where is your line?</h2>
+        <p class="lede">Set a cap for extra default and a floor for weekly profit.</p>
+      </div>
+      <div class="glass decision-lab"
+        data-upper="11.086855402566572" data-lower="168.7110563810179">
+        <div class="lab-head">
+          <p class="note">Shading marks the 95% interval. The marker shows your threshold.</p>
+          <button class="action" type="button" id="reset" hidden>Reset thresholds</button>
+        </div>
+        <div class="lab-gates"><div class="gate default">
+          <div class="gate-title">
+            <h3><label for="default-limit">Maximum extra default</label></h3>
+            <p class="gate-result" data-passing="false">
+              <strong id="default-status">FAIL</strong></p>
+          </div>
+          <p id="default-evidence" class="note">Upper bound
+          <strong>11.09 pp</strong><br>
+          95% CI 1.20 to 11.09 pp · n=845</p>
+          <div class="control-line">
+            <span>Threshold</span>
+            <strong id="default-value">2.00 pp</strong>
+          </div>
+          <div class="rail" style="--low:5.977174%;--high:55.434277%;
+          --threshold:10.000000%">
+            <div class="band" aria-hidden="true"><i></i><b></b></div>
+            <input id="default-limit" type="range" min="0" max="20" step="0.01"
+              value="2.0" aria-describedby="default-evidence" hidden>
+          </div>
+          <div class="axis" aria-hidden="true"><span>0</span><span>20 pp</span></div>
+        </div><div class="gate profit">
+          <div class="gate-title">
+            <h3><label for="profit-limit">Minimum weekly profit gain</label></h3>
+            <p class="gate-result" data-passing="true">
+              <strong id="profit-status">PASS</strong></p>
+          </div>
+          <p id="profit-evidence" class="note">Lower bound
+          <strong>168.7 ₹/week</strong><br>
+          95% CI 168.7 to 1,644.4 ₹/week · n=752</p>
+          <div class="control-line">
+            <span>Threshold</span>
+            <strong id="profit-value">0 ₹/week</strong>
+          </div>
+          <div class="rail" style="--low:8.435553%;--high:82.221379%;
+          --threshold:0.000000%">
+            <div class="band" aria-hidden="true"><i></i><b></b></div>
+            <input id="profit-limit" type="range" min="0" max="2000" step="1"
+              value="0.0" aria-describedby="profit-evidence" hidden>
+          </div>
+          <div class="axis" aria-hidden="true"><span>0</span><span>2,000 ₹/week</span></div>
+        </div></div>
+        <div class="lab-result" data-passing="false"
+          role="status" aria-live="polite" aria-atomic="true">
+          <p><span class="label">Scenario verdict</span>
+          <strong id="joint-status">Pilot FAIL</strong></p>
+          <p id="joint-detail">Default fails ·
+          Profit passes</p>
+        </div>
+        <p id="slider-fallback" class="note">Turn on JavaScript to change the preset thresholds.</p>
+      </div>
+    </section>
+
+    <section class="scene pricing-scene" aria-labelledby="price-title" data-reveal>
+      <div class="scene-head">
+        <p class="label">Price the risk</p>
+        <h2 id="price-title">What could it cost?</h2>
+        <p class="lede">Estimated extra credit loss with ₹8,000 at risk per loan
+        and 50% loss given default.</p>
+        <a class="action" href="pricing.html">Explore the pricing</a>
+      </div>
+      <div class="glass price-card risk">
+        <p class="label">Extra expected loss</p>
+        <p class="price-value">₹245.6</p>
+        <p class="price-unit">per loan</p>
+        <p class="metric-evidence">95% CI ₹47.8 to 443.5 · n=845</p>
+      </div>
+    </section>
+
+    <section class="scene" aria-labelledby="limits-title" data-reveal>
+      <div class="scene-head">
+        <p class="label">Limits of the evidence</p>
+        <h2 id="limits-title">What this trial<br>cannot establish.</h2>
+      </div>
+      <dl class="limits-list">
+        <div><dt>The grace period on its own</dt>
+          <dd>Maturity and effective interest changed with the repayment schedule.</dd></div>
+        <div><dt>Profit across all borrowers</dt>
+          <dd>Profit was measured only where it was recorded. Missing follow-up leaves the
+          full-cohort effect unresolved.</dd></div>
+        <div><dt>A profit gain that holds after trimming</dt>
+          <dd>Trimmed profit was +335.0 ₹/week (95% CI
+          −6.9 to 676.8 ₹/week, n=744). Profit gate
+          FAIL.</dd></div>
+      </dl>
+    </section>
+
+    <section class="scene" aria-labelledby="evidence-title" data-reveal>
+      <div class="scene-head"><h2 id="evidence-title">Explore the evidence.</h2></div>
+      <div class="evidence-grid"><a class="glass evidence-link" href="trial.html"><strong>The trial</strong><span>Who borrowed and what changed.</span></a><a class="glass evidence-link" href="reproduction.html"><strong>Reproduction</strong><span>The published estimates alongside the rebuild.</span></a><a class="glass evidence-link" href="decision.html"><strong>The decision</strong><span>How the pilot rule uses the intervals.</span></a><a class="glass evidence-link" href="pricing.html"><strong>Pricing</strong><span>Loss scenarios and break-even thresholds.</span></a><a class="glass evidence-link" href="robustness.html"><strong>Robustness</strong><span>Trimming, missing values, and randomization checks.</span></a><a class="glass evidence-link" href="limits.html"><strong>Data and limits</strong><span>What the deposit can support.</span></a></div>
+    </section>
+    
   </main>
-  <footer class="wrap masthead footer">
-    <a href="https://github.com/Ghostboy789">Medhansh Shekhawat</a>
-    <a href="https://doi.org/10.1257/aer.103.6.2196">Trial paper</a>
-    <a href="https://www.aeaweb.org/articles?id=10.1257/aer.103.6.2196">AEA article page</a>
-    <a href="https://doi.org/10.3886/E112672V1">openICPSR project 112672 V1</a>
+  <footer class="wrap footer">
+    <div><strong>First Payment</strong><p>By Medhansh Shekhawat</p></div>
+    <div class="footer-links">
+      <a href="https://www.aeaweb.org/articles?id=10.1257/aer.103.6.2196">AEA article page</a>
+      <a href="https://doi.org/10.3886/E112672V1">openICPSR project 112672 V1</a>
+      <a href="https://github.com/Ghostboy789">GitHub</a>
+      <a href="https://in.linkedin.com/in/medhansh-shekhawat">LinkedIn</a>
+    </div>
   </footer>
 </body>
 </html>

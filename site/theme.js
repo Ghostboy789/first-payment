@@ -1,19 +1,6 @@
-const theme = document.querySelector("#theme");
-
 try {
   const saved = localStorage.getItem("theme");
-  if (saved === "light" || saved === "dark") theme.value = saved;
+  if (saved === "light" || saved === "dark") document.documentElement.dataset.theme = saved;
 } catch {
-  // Local previews may have storage disabled.
+  // The system theme applies when storage is unavailable.
 }
-
-document.documentElement.dataset.theme = theme.value;
-theme.closest("label").hidden = false;
-theme.addEventListener("change", () => {
-  document.documentElement.dataset.theme = theme.value;
-  try {
-    localStorage.setItem("theme", theme.value);
-  } catch {
-    // The current page still changes theme.
-  }
-});

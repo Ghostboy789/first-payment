@@ -6,22 +6,31 @@
   <meta name="color-scheme" content="light dark">
   <meta name="description" content="A Kolkata microfinance trial, reviewed as a credit pilot.">
   <title>Data and limits · First Payment</title>
+  <script src="theme.js"></script>
   <link rel="stylesheet" href="style.css">
-  <script src="theme.js" defer></script>
+  <script src="story.js" defer></script>
 </head>
-<body>
+<body class="detail">
+  <div class="mesh" aria-hidden="true"><i></i><i></i><i></i></div>
   <a class="skip" href="#content">Skip to content</a>
-  <header class="wrap masthead">
-    <a class="wordmark" href="index.html">First Payment</a>
-    <label class="theme" hidden>
-      <span>Theme</span>
-      <select id="theme">
-        <option value="system">System</option>
-        <option value="light">Light</option>
-        <option value="dark">Dark</option>
-      </select>
-    </label>
-    <nav aria-label="Study pages"><a href="index.html">Overview</a><a href="trial.html">The trial</a><a href="reproduction.html">Reproduction</a><a href="decision.html">The decision</a><a href="pricing.html">Pricing</a><a href="robustness.html">Robustness</a><a href="limits.html" aria-current=page>Data and limits</a></nav>
+  <header class="nav-shell">
+    <div class="glass nav-pill">
+      <a class="wordmark" href="index.html">
+        <span class="mark" aria-hidden="true"></span>First Payment</a>
+      <nav class="nav-wide" aria-label="Study pages"><a href="index.html">Overview</a><a href="trial.html">The trial</a><a href="reproduction.html">Reproduction</a><a href="decision.html">The decision</a><a href="pricing.html">Pricing</a><a href="robustness.html">Robustness</a><a href="limits.html" aria-current=page>Data and limits</a></nav>
+      <details class="nav-menu">
+        <summary>Pages</summary>
+        <nav class="glass" aria-label="Study pages"><a href="index.html">Overview</a><a href="trial.html">The trial</a><a href="reproduction.html">Reproduction</a><a href="decision.html">The decision</a><a href="pricing.html">Pricing</a><a href="robustness.html">Robustness</a><a href="limits.html" aria-current=page>Data and limits</a></nav>
+      </details>
+      <label class="theme" hidden>
+        <span class="sr-only">Theme</span><span class="theme-icon" aria-hidden="true"></span>
+        <select id="theme">
+          <option value="system">System</option>
+          <option value="light">Light</option>
+          <option value="dark">Dark</option>
+        </select>
+      </label>
+    </div>
   </header>
   <main id="content" class="wrap" tabindex="-1">
     <header class="page-header">
@@ -29,7 +38,7 @@
       <h1>What this trial can tell us.</h1>
       <p class="lede">The data cover 845 borrowers at one lender. Follow-up and contract terms set the limits of the decision.</p>
     </header>
-    <section class="chapter"><h2>Reading the estimates</h2><div>
+    <section data-reveal class="chapter"><h2>Reading the estimates</h2><div>
       <p>A percentage point is the absolute difference between two rates.
       A 95% CI gives a range of estimates compatible with the data under the fitted model.
       Clustering accounts for shared outcomes among members of the same loan group.</p>
@@ -38,7 +47,7 @@
       at one Kolkata lender. Applying it to another product or cohort would require new data.</p>
       <p>Reported business profit is available for a subset of borrowers.</p>
     </div></section>
-    <section id="loan-use-source" class="chapter"><h2>Loan-use survey coverage</h2><div>
+    <section data-reveal id="loan-use-source" class="chapter"><h2>Loan-use survey coverage</h2><div>
       <p>The paper’s methods report 93% completion for the Survey 2 loan-use module.
       The Table 1 note says all clients completed it. The deposit confirms that the regression
       used 845 records with a value for business spending.</p>
@@ -48,10 +57,10 @@
       rounding. The deposit and appendix leave the flag’s meaning and survey provenance
       uncertain.</p>
       <p><a href="robustness.html#loan-use">See the estimate after excluding flagged records</a></p>
-      <p><a href="https://doi.org/10.1257/aer.103.6.2196">Paper, Section II.A and Table 1</a> ·
+      <p><a href="https://www.aeaweb.org/articles?id=10.1257/aer.103.6.2196">Paper, Section II.A and Table 1</a> ·
       <a href="https://www.aeaweb.org/articles/materials/2402">Supplemental appendix</a></p>
     </div></section>
-    <section class="chapter"><h2>Data and code</h2><div>
+    <section data-reveal class="chapter"><h2>Data and code</h2><div>
       <p>Source data by Erica Field, Rohini Pande, John Papp and Natalia Rigol, published by the
       American Economic Association and distributed by ICPSR. The original deposit licenses code
       under BSD-3-Clause and other material under CC BY 4.0. This site presents independently
@@ -59,15 +68,16 @@
       <p><a href="https://doi.org/10.3886/E112672V1">AEA replication package · project 112672 V1</a></p>
       <p><a href="data/results.json">Download the aggregate results</a></p>
     </div></section>
-    <div class="next">
-      <a href="index.html">Back to · Overview</a>
-    </div>
+    <div class="next"><a class="action" href="index.html">Back to overview</a></div>
   </main>
-  <footer class="wrap masthead footer">
-    <a href="https://github.com/Ghostboy789">Medhansh Shekhawat</a>
-    <a href="https://doi.org/10.1257/aer.103.6.2196">Trial paper</a>
-    <a href="https://www.aeaweb.org/articles?id=10.1257/aer.103.6.2196">AEA article page</a>
-    <a href="https://doi.org/10.3886/E112672V1">openICPSR project 112672 V1</a>
+  <footer class="wrap footer">
+    <div><strong>First Payment</strong><p>By Medhansh Shekhawat</p></div>
+    <div class="footer-links">
+      <a href="https://www.aeaweb.org/articles?id=10.1257/aer.103.6.2196">AEA article page</a>
+      <a href="https://doi.org/10.3886/E112672V1">openICPSR project 112672 V1</a>
+      <a href="https://github.com/Ghostboy789">GitHub</a>
+      <a href="https://in.linkedin.com/in/medhansh-shekhawat">LinkedIn</a>
+    </div>
   </footer>
 </body>
 </html>

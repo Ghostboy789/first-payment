@@ -6,59 +6,69 @@
   <meta name="color-scheme" content="light dark">
   <meta name="description" content="A Kolkata microfinance trial, reviewed as a credit pilot.">
   <title>Pricing · First Payment</title>
+  <script src="theme.js"></script>
   <link rel="stylesheet" href="style.css">
-  <script src="theme.js" defer></script>
+  <script src="story.js" defer></script>
 </head>
-<body>
+<body class="detail">
+  <div class="mesh" aria-hidden="true"><i></i><i></i><i></i></div>
   <a class="skip" href="#content">Skip to content</a>
-  <header class="wrap masthead">
-    <a class="wordmark" href="index.html">First Payment</a>
-    <label class="theme" hidden>
-      <span>Theme</span>
-      <select id="theme">
-        <option value="system">System</option>
-        <option value="light">Light</option>
-        <option value="dark">Dark</option>
-      </select>
-    </label>
-    <nav aria-label="Study pages"><a href="index.html">Overview</a><a href="trial.html">The trial</a><a href="reproduction.html">Reproduction</a><a href="decision.html">The decision</a><a href="pricing.html" aria-current=page>Pricing</a><a href="robustness.html">Robustness</a><a href="limits.html">Data and limits</a></nav>
+  <header class="nav-shell">
+    <div class="glass nav-pill">
+      <a class="wordmark" href="index.html">
+        <span class="mark" aria-hidden="true"></span>First Payment</a>
+      <nav class="nav-wide" aria-label="Study pages"><a href="index.html">Overview</a><a href="trial.html">The trial</a><a href="reproduction.html">Reproduction</a><a href="decision.html">The decision</a><a href="pricing.html" aria-current=page>Pricing</a><a href="robustness.html">Robustness</a><a href="limits.html">Data and limits</a></nav>
+      <details class="nav-menu">
+        <summary>Pages</summary>
+        <nav class="glass" aria-label="Study pages"><a href="index.html">Overview</a><a href="trial.html">The trial</a><a href="reproduction.html">Reproduction</a><a href="decision.html">The decision</a><a href="pricing.html" aria-current=page>Pricing</a><a href="robustness.html">Robustness</a><a href="limits.html">Data and limits</a></nav>
+      </details>
+      <label class="theme" hidden>
+        <span class="sr-only">Theme</span><span class="theme-icon" aria-hidden="true"></span>
+        <select id="theme">
+          <option value="system">System</option>
+          <option value="light">Light</option>
+          <option value="dark">Dark</option>
+        </select>
+      </label>
+    </div>
   </header>
   <main id="content" class="wrap" tabindex="-1">
     <header class="page-header">
       <p class="label">Pricing</p>
       <h1>What would the extra defaults cost?</h1>
-      <p class="lede">Under the base assumptions, extra loss is ₹245.6 per loan (95% CI ₹47.8 to 443.5).</p>
+      <p class="lede">Under the base assumptions, extra loss is ₹245.6 per loan (95% CI ₹47.8 to 443.5, n=845).</p>
     </header>
-    <section class="chapter wide"><h2>A credit-loss surcharge</h2>
+    <section data-reveal class="chapter wide"><h2>A credit-loss surcharge</h2>
       <p class="formula">Extra default × exposure × loss given default</p>
-      <table role="table"><caption>Scenario exposure ₹8,000. Intervals carry uncertainty in extra default.</caption><thead role="rowgroup"><tr role="row"><th scope="col" role="columnheader">Loss given default</th><th scope="col" role="columnheader">Extra loss per loan</th><th scope="col" role="columnheader">95% CI</th></tr></thead><tbody role="rowgroup"><tr role="row"><th scope="row" role="rowheader">25%</th><td role="cell"><span class="cell-label" aria-hidden="true">Extra loss per loan</span>₹122.8</td><td role="cell"><span class="cell-label" aria-hidden="true">95% CI</span>₹23.9 to 221.7</td></tr><tr role="row"><th scope="row" role="rowheader">50% · base</th><td role="cell"><span class="cell-label" aria-hidden="true">Extra loss per loan</span>₹245.6</td><td role="cell"><span class="cell-label" aria-hidden="true">95% CI</span>₹47.8 to 443.5</td></tr><tr role="row"><th scope="row" role="rowheader">75%</th><td role="cell"><span class="cell-label" aria-hidden="true">Extra loss per loan</span>₹368.5</td><td role="cell"><span class="cell-label" aria-hidden="true">95% CI</span>₹71.7 to 665.2</td></tr><tr role="row"><th scope="row" role="rowheader">100%</th><td role="cell"><span class="cell-label" aria-hidden="true">Extra loss per loan</span>₹491.3</td><td role="cell"><span class="cell-label" aria-hidden="true">95% CI</span>₹95.6 to 886.9</td></tr></tbody></table>
+      <div class="glass table-wrap"><table role="table"><caption>Scenario exposure ₹8,000. Intervals use the extra-default estimate (n=845).</caption><thead role="rowgroup"><tr role="row"><th scope="col" role="columnheader">Loss given default</th><th scope="col" role="columnheader">Extra loss per loan</th><th scope="col" role="columnheader">95% CI</th></tr></thead><tbody role="rowgroup"><tr role="row"><th scope="row" role="rowheader">25%</th><td role="cell"><span class="cell-label" aria-hidden="true">Extra loss per loan</span><span>₹122.8</span></td><td role="cell"><span class="cell-label" aria-hidden="true">95% CI</span><span>₹23.9 to 221.7</span></td></tr><tr role="row"><th scope="row" role="rowheader">50% · base</th><td role="cell"><span class="cell-label" aria-hidden="true">Extra loss per loan</span><span>₹245.6</span></td><td role="cell"><span class="cell-label" aria-hidden="true">95% CI</span><span>₹47.8 to 443.5</span></td></tr><tr role="row"><th scope="row" role="rowheader">75%</th><td role="cell"><span class="cell-label" aria-hidden="true">Extra loss per loan</span><span>₹368.5</span></td><td role="cell"><span class="cell-label" aria-hidden="true">95% CI</span><span>₹71.7 to 665.2</span></td></tr><tr role="row"><th scope="row" role="rowheader">100%</th><td role="cell"><span class="cell-label" aria-hidden="true">Extra loss per loan</span><span>₹491.3</span></td><td role="cell"><span class="cell-label" aria-hidden="true">95% CI</span><span>₹95.6 to 886.9</span></td></tr></tbody></table></div>
       <p>Exposure uses original principal as a proxy for the balance at risk. Loss given default is
       the share of that exposure the lender fails to recover. The scenarios hold both fixed across
       arms. Outstanding debt in the data rose by ₹148.7 per loan
       (95% CI ₹−16.4 to 313.8, n=845). That balance can still be recovered.</p>
     </section>
-    <section class="chapter wide"><h2>Where loss breaks even</h2>
+    <section data-reveal class="chapter wide"><h2>Where loss breaks even</h2>
       <p class="formula">contribution ÷ (exposure × loss given default)</p>
-      <table role="table"><caption>Lender scenarios at base loss given default. Fixed inputs have no sampling interval.</caption><thead role="rowgroup"><tr role="row"><th scope="col" role="columnheader">Fixed lender contribution</th><th scope="col" role="columnheader">Break-even default increase</th></tr></thead><tbody role="rowgroup"><tr role="row"><th scope="row" role="rowheader">₹0 per loan</th><td role="cell"><span class="cell-label" aria-hidden="true">Break-even default increase</span>0.00 pp</td></tr><tr role="row"><th scope="row" role="rowheader">₹200 per loan</th><td role="cell"><span class="cell-label" aria-hidden="true">Break-even default increase</span>5.00 pp</td></tr></tbody></table>
-      <p>Both illustrative thresholds fall below the trial’s upper default bound.</p>
+      <div class="glass table-wrap"><table role="table"><caption>Lender scenarios at base loss given default. Fixed inputs have no sampling interval.</caption><thead role="rowgroup"><tr role="row"><th scope="col" role="columnheader">Fixed lender contribution</th><th scope="col" role="columnheader">Break-even default increase</th></tr></thead><tbody role="rowgroup"><tr role="row"><th scope="row" role="rowheader">₹0 per loan</th><td role="cell"><span class="cell-label" aria-hidden="true">Break-even default increase</span><span>0.00 pp</span></td></tr><tr role="row"><th scope="row" role="rowheader">₹200 per loan</th><td role="cell"><span class="cell-label" aria-hidden="true">Break-even default increase</span><span>5.00 pp</span></td></tr></tbody></table></div>
       <p>The borrower profit gain was ₹906.6 per week
       (95% CI ₹168.7 to 1,644.4, n=752). Using that one week as a hypothetical
-      budget implies 22.66 pp (95% CI 4.22 to 41.11 pp).
+      budget implies 22.66 pp
+      (95% CI 4.22 to 41.11 pp, n=752).
       The borrower receives that profit around three years after disbursement.
       The lender bears the credit loss on the trial loan. This comparison shows scale across
       horizons.</p>
       <p>The surcharge covers only the modeled credit-loss difference. Funding, timing, operating
       costs and borrower responses to pricing are outside the calculation.</p>
     </section>
-    <div class="next">
-      <a href="robustness.html">Next · Robustness</a>
-    </div>
+    <div class="next"><a class="action" href="robustness.html">Next · Robustness</a></div>
   </main>
-  <footer class="wrap masthead footer">
-    <a href="https://github.com/Ghostboy789">Medhansh Shekhawat</a>
-    <a href="https://doi.org/10.1257/aer.103.6.2196">Trial paper</a>
-    <a href="https://www.aeaweb.org/articles?id=10.1257/aer.103.6.2196">AEA article page</a>
-    <a href="https://doi.org/10.3886/E112672V1">openICPSR project 112672 V1</a>
+  <footer class="wrap footer">
+    <div><strong>First Payment</strong><p>By Medhansh Shekhawat</p></div>
+    <div class="footer-links">
+      <a href="https://www.aeaweb.org/articles?id=10.1257/aer.103.6.2196">AEA article page</a>
+      <a href="https://doi.org/10.3886/E112672V1">openICPSR project 112672 V1</a>
+      <a href="https://github.com/Ghostboy789">GitHub</a>
+      <a href="https://in.linkedin.com/in/medhansh-shekhawat">LinkedIn</a>
+    </div>
   </footer>
 </body>
 </html>
