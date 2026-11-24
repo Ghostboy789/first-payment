@@ -1,4 +1,3 @@
-*
-!vercel.json
-!site/
-!site/**
+/*
+!/site
+!/vercel.json
